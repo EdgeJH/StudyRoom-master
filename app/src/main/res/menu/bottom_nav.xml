@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/bt_nav_info"
+        android:icon="@drawable/read"
+        android:title="스터디룸" />
+
+    <item android:id="@+id/bt_nav_reserve"
+        android:icon="@drawable/reserve_history"
+        android:title="예약 내역"/>
+
+    <item android:id="@+id/bt_nav_account"
+        android:icon="@drawable/account"
+        android:title="내 계정"/>
+
+
+
+</menu>

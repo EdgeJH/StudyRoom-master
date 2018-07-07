@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.studyroom.Auth.Register.RegisterCardActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25dp"
+            android:text="카드등록"
+            android:textColor="#000000"
+            android:layout_marginLeft="25dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="번호"
+            android:textSize="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="45dp"
+            android:textColor="#000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <EditText
+                android:id="@+id/reg_card_cardnum_input1"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:maxLength="4"
+                android:inputType="number"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/edittext_stroke"/>
+            <EditText
+                android:id="@+id/reg_card_cardnum_input2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:maxLength="4"
+                android:inputType="number"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/edittext_stroke"/>
+            <EditText
+                android:id="@+id/reg_card_cardnum_input3"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:maxLength="4"
+                android:inputType="number"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/edittext_stroke"/>
+            <EditText
+                android:id="@+id/reg_card_cardnum_input4"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:maxLength="4"
+                android:inputType="number"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/edittext_stroke"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="유효기간"
+            android:textSize="25dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:textColor="#000000"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <EditText
+                android:id="@+id/reg_card_validity_input1"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:maxLength="4"
+                android:inputType="number"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/edittext_stroke"
+                android:hint="MM"/>
+            <EditText
+                android:id="@+id/reg_card_validity_input2"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:maxLength="4"
+                android:inputType="number"
+                android:layout_marginLeft="25dp"
+                android:background="@drawable/edittext_stroke"
+                android:hint="YY"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CVC (카드 뒤 3자리)"
+            android:textSize="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="40dp"
+            android:textColor="#000000"/>
+
+        <EditText
+            android:id="@+id/reg_card_cvc_input"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:maxLength="4"
+            android:inputType="number"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/edittext_stroke" />
+
+        <Button
+            android:id="@+id/reg_card_clear_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="90dp"
+            android:background="@drawable/ovalbutton"
+            android:text="다음"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

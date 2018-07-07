@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.studyroom.Auth.Register.RegisterPhoneValidActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/reg_phone_input_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:hint="휴대폰 번호"
+            android:background="@drawable/edittext_stroke"/>
+
+        <Button
+            android:id="@+id/reg_phone_sendkey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="25dp"
+            android:text="인증번호 전송"
+            android:background="@drawable/btn_boarder"/>
+
+        <EditText
+            android:id="@+id/reg_phone_input_key"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="25dp"
+            android:hint="인증번호"
+            android:background="@drawable/edittext_stroke"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp"
+            android:layout_marginTop="200dp"
+            android:background="@drawable/ovalbutton"
+            android:text="다음"
+            android:textColor="#FFFFFF"/>
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

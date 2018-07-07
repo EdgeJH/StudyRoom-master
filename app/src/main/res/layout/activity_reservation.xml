@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.studyroom.ReservationPage.ReservationActivity">
+
+    <EditText
+        android:id="@+id/reserv_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="예약자명"/>
+
+    <EditText
+        android:id="@+id/reserv_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="전화번호"/>
+
+    <EditText
+        android:id="@+id/reserv_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="인원수"/>
+
+    <TextView
+        android:id="@+id/text_reserve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/payment_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SAVE"/>
+
+
+    <Button
+        android:id="@+id/load_bt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LOAD"/>
+
+
+
+</LinearLayout>

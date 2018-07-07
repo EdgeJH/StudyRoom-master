@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "549727039614",
+    "firebase_url": "https://studyroom-67721.firebaseio.com",
+    "project_id": "studyroom-67721",
+    "storage_bucket": "studyroom-67721.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549727039614:android:a66801092f68dd6b",
+        "android_client_info": {
+          "package_name": "com.example.studyroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549727039614-b8qevpdpcql4cs10gk14im717eob75rf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studyroom",
+            "certificate_hash": "de4f1c7679358a1bacdb45ec2e869c4a481c6e2c"
+          }
+        },
+        {
+          "client_id": "549727039614-aujan2ha8ln9v9prdecds8soc67vgmrj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.studyroom",
+            "certificate_hash": "746195dcaa6154d69536bc1979c77e407f7aae7b"
+          }
+        },
+        {
+          "client_id": "549727039614-i3uvuc06n5al45r92g61mjkn4tl43cde.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "549727039614-i3uvuc06n5al45r92g61mjkn4tl43cde.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA0xTKqrV07gW67xkEz0-pbatv-WKMkEi8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "549727039614-i3uvuc06n5al45r92g61mjkn4tl43cde.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
