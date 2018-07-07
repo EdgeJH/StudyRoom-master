@@ -9,11 +9,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-<<<<<<< Updated upstream
-import com.example.studyroom.Model.ReservModel;
-=======
+
+
 import com.example.studyroom.Model.ReserveModel;
->>>>>>> Stashed changes
+
 import com.example.studyroom.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -27,7 +26,10 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+
+
 
 public class ReservationActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -65,7 +67,6 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
     }
 
     @Override
-<<<<<<< Updated upstream
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.payment_bt:
@@ -75,7 +76,9 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
                 loadData();
 //                ReadSingleContact();
                 break;
-=======
+        }
+    }
+
     public void onComplete(@NonNull Task<QuerySnapshot> task) {
         if(task.isSuccessful()){
             QuerySnapshot snapshots = task.getResult();
@@ -83,10 +86,9 @@ public class ReservationActivity extends AppCompatActivity implements View.OnCli
             for(DocumentSnapshot value : snapshotList){
                 reservModels.add(value.toObject(ReserveModel.class));
             }
->>>>>>> Stashed changes
+
         }
     }
-
 
     private void saveData() {
         Map<String, Object> reserveInfo = new HashMap<>();
