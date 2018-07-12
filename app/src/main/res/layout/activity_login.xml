@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="80dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="100dp"
             android:hint="이메일"
             android:inputType="textEmailAddress"/>
 
@@ -34,19 +34,18 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="80dp"
-            android:layout_marginTop="15dp"
+            android:layout_marginTop="50dp"
             android:background="@drawable/btn_boarder"
             android:text="로그인"
             />
 
         <TextView
             android:id="@+id/reg_regtv"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="110dp"
-            android:layout_marginLeft="110dp"
-            android:layout_marginTop="15dp"
-            android:paddingLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorPrimary"
             android:text="@string/underline_register_textview"
             android:background="@drawable/textview_underline"/>
 
