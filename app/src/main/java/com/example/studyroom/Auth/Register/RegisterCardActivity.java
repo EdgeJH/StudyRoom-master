@@ -9,9 +9,10 @@ import com.example.authmodule.module.activityutils.TaskCallback;
 import com.example.authmodule.module.factory.AuthModuleFactory;
 import com.example.authmodule.module.factory.AuthType;
 import com.example.studyroom.Auth.Impl.IRegisterActivity;
+import com.example.studyroom.BaseActivity;
 import com.example.studyroom.R;
 
-public class RegisterCardActivity extends AppCompatActivity implements IRegisterActivity, TaskCallback {
+public class RegisterCardActivity extends BaseActivity implements IRegisterActivity, TaskCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

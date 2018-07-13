@@ -14,10 +14,11 @@ import com.example.authmodule.module.activityutils.TaskCallback;
 import com.example.authmodule.module.factory.AuthModuleFactory;
 import com.example.authmodule.module.factory.AuthType;
 import com.example.studyroom.Auth.Register.RegisterEmailActivity;
+import com.example.studyroom.BaseActivity;
 import com.example.studyroom.Main.MainActivity;
 import com.example.studyroom.R;
 
-public class LoginActivity extends AppCompatActivity implements TaskCallback {
+public class LoginActivity extends BaseActivity implements TaskCallback {
 
     private EditText emailEdit,pwdEdit;
     private Button loginBt;

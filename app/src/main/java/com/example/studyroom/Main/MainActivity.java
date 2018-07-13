@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
 
+import com.example.studyroom.BaseActivity;
 import com.example.studyroom.Main.UserPackage.AccountFragment;
 import com.example.studyroom.Model.CompanyModel;
 import com.example.studyroom.R;
@@ -22,7 +23,7 @@ import com.google.firebase.firestore.QuerySnapshot;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
+public class MainActivity extends BaseActivity implements BottomNavigationView.OnNavigationItemSelectedListener, ViewPager.OnPageChangeListener {
 
     ViewPager viewPager;
     BottomNavigationView bottomNavigationView;

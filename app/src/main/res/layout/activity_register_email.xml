@@ -17,6 +17,7 @@
                 android:layout_width="?attr/actionBarSize"
                 android:layout_height="match_parent"
                 android:src="@drawable/back"
+                android:id="@+id/back_btn"
                 android:padding="15dp"/>
             <TextView
                 android:layout_width="wrap_content"
@@ -42,6 +43,14 @@
             android:inputType="textEmailAddress"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reg_input_email"
+            android:layout_marginStart="55dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10dp"
+            android:id="@+id/email_err_txt"/>
 
         <EditText
             android:id="@+id/reg_input_pwd"
@@ -53,7 +62,14 @@
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
             android:layout_marginTop="25dp"/>
-
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/reg_input_pwd"
+            android:layout_marginStart="55dp"
+            android:textColor="@color/colorPrimary"
+            android:textSize="10dp"
+            android:id="@+id/pwd_err_txt"/>
         <Button
             android:id="@+id/reg_email_next_btn"
             android:layout_width="match_parent"

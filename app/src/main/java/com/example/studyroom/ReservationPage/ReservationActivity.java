@@ -10,7 +10,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 
-
+import com.example.studyroom.BaseActivity;
 import com.example.studyroom.Model.ReserveModel;
 
 import com.example.studyroom.R;
@@ -31,7 +31,7 @@ import java.util.Map;
 
 
 
-public class ReservationActivity extends AppCompatActivity implements View.OnClickListener {
+public class ReservationActivity extends BaseActivity implements View.OnClickListener {
 
     FirebaseFirestore firestore = FirebaseFirestore.getInstance();
     CollectionReference reference = firestore.collection("Reservation");
