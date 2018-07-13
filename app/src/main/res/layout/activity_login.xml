@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:orientation="vertical">
-
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="70dp"
+            android:text="Room No."
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/myfont"
+            android:textColor="@android:color/black"
+            android:shadowColor="@color/colorPrimary"
+            android:shadowDx="3"
+            android:shadowDy="3"
+            android:shadowRadius="10"
+            android:gravity="center"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"/>
         <EditText
             android:id="@+id/reg_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="80dp"
             android:layout_marginRight="80dp"
-            android:layout_marginTop="100dp"
+            android:layout_marginTop="30dp"
             android:hint="이메일"
             android:inputType="textEmailAddress"/>
 
