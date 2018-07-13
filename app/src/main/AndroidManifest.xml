@@ -9,14 +9,17 @@
         android:supportsRtl="true"
         android:name=".StudyApp"
         android:theme="@style/AppTheme">
-        <activity android:name=".Main.MainActivity" />
-        <activity android:name=".Auth.Login.LoginActivity"
-            android:windowSoftInputMode="adjustResize">
+        <activity android:name=".Main.MainActivity"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".Auth.Login.LoginActivity"
+            android:windowSoftInputMode="adjustResize">
+
         </activity>
         <activity android:name=".DetailPage.DetailPageActivity" />
         <activity android:name=".ReservationPage.ReservationActivity" />

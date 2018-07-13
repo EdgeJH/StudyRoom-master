@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 import com.example.studyroom.Model.CompanyModel;
 import com.example.studyroom.R;
+import com.example.studyroom.Utils.BottomSheetCallback;
 import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -33,13 +34,14 @@ import static android.content.Context.INPUT_METHOD_SERVICE;
 
 public class MainFragment extends Fragment implements MainContract.View, View.OnClickListener, TextWatcher, TextView.OnEditorActionListener {
 
-    FirebaseFirestore firestore = FirebaseFirestore.getInstance();
-    CollectionReference reference = firestore.collection("Company");
-    ArrayList<CompanyModel> companyModels = new ArrayList<>();
-    private ImageView searchBt, resetBt;
+    private FirebaseFirestore firestore = FirebaseFirestore.getInstance();
+    private CollectionReference reference = firestore.collection("Company");
+    private ArrayList<CompanyModel> companyModels = new ArrayList<>();
+    private ImageView searchBt, resetBt,shadow;
     private EditText searchEdit;
     private BottomSheetBehavior bottomSheetBehavior;
-    private RelativeLayout bottomSheet, open_close;
+    private RelativeLayout bottomSheet;
+
 
     @Nullable
     @Override
@@ -59,29 +61,30 @@ public class MainFragment extends Fragment implements MainContract.View, View.On
         searchBt = view.findViewById(R.id.search_bt);
         resetBt = view.findViewById(R.id.reset_bt);
         searchEdit = view.findViewById(R.id.search_edit);
-        searchBt.setOnClickListener(this);
-        resetBt.setOnClickListener(this);
-        searchEdit.addTextChangedListener(this);
-        searchEdit.setOnEditorActionListener(this);
         bottomSheet = view.findViewById(R.id.bottom_sheet);
-        open_close = view.findViewById(R.id.open_close);
+        shadow = view.findViewById(R.id.shadow);
+
 
         bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
+        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_HIDDEN);
+        bottomSheetBehavior.setBottomSheetCallback(new BottomSheetCallback(shadow));
 
-        open_close.setOnClickListener(this);
+        searchBt.setOnClickListener(this);
+        resetBt.setOnClickListener(this);
+        searchEdit.setOnEditorActionListener(this);
+        searchEdit.addTextChangedListener(this);
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.open_close:
+            case R.id.search_bt:
                 switch (bottomSheetBehavior.getState()) {
-                    case BottomSheetBehavior.STATE_EXPANDED:
+                    case BottomSheetBehavior.STATE_HIDDEN:
                         bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
                         break;
-                    case BottomSheetBehavior.STATE_COLLAPSED:
-                        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
-                        break;
+
 
                 }
                 break;
@@ -116,7 +119,6 @@ public class MainFragment extends Fragment implements MainContract.View, View.On
     public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
         switch (actionId) {
             case EditorInfo.IME_ACTION_SEARCH:
-
                 ((InputMethodManager) getActivity().getApplicationContext()
                         .getSystemService(INPUT_METHOD_SERVICE))
                         .hideSoftInputFromWindow(searchEdit.getWindowToken(), 0);
