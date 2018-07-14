@@ -55,7 +55,7 @@
     app:layout_anchor="@+id/bottom_sheet"
     android:id="@+id/shadow"
     android:visibility="gone"
-    android:background="@drawable/top_shadow"/>
+    android:background="@drawable/shadow_gradient"/>
     <RelativeLayout
         android:id="@+id/bottom_sheet"
         android:layout_width="match_parent"
