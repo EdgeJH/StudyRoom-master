@@ -1,15 +1,17 @@
 package com.example.studyroom.Model;
 
+import java.io.Serializable;
+
 /**
  * Created by hong on 2018-05-11.
  */
 
-public class CompanyModel{
+public class CompanyModel implements Serializable{
 
     //업체에서 고객에게 넘겨줄 데이터
-    private String roomName;
     private String operatingTime;
     private String companyName;
+    private String companyKey;
     private int roomImage;
     private int possibleNum;
     private int price;
@@ -22,7 +24,6 @@ public class CompanyModel{
     }
 
     private CompanyModel(Builder builder) {
-        this.roomName = builder.roomName;
         this.operatingTime = builder.operatingTime;
         this.companyName = builder.companyName;
         this.roomImage = builder.roomImage;
@@ -31,12 +32,13 @@ public class CompanyModel{
         this.companybolModel = builder.companybolModel;
         this.latitude = builder.latitude;
         this.longitude = builder.longitude;
+        this.companyKey = builder.companyKey;
     }
 
     public static class Builder {
-        String roomName;
         String operatingTime;
         String companyName;
+        String companyKey;
         int roomImage;
         int possibleNum;
         int price;
@@ -44,8 +46,8 @@ public class CompanyModel{
         float latitude;
         float longitude;
 
-        public Builder setRoomName(String roomName) {
-            this.roomName = roomName;
+        public Builder setCompanyKey(String companyKey) {
+            this.companyKey = companyKey;
             return this;
         }
 
@@ -89,20 +91,9 @@ public class CompanyModel{
             return this;
         }
 
-        public CompanyModel build(){
+        public CompanyModel build() {
             return new CompanyModel(this);
         }
-    }
-
-
-
-
-    public String getRoomName() {
-        return roomName;
-    }
-
-    public void setRoomName(String roomName) {
-        this.roomName = roomName;
     }
 
     public String getOperatingTime() {
@@ -159,6 +150,15 @@ public class CompanyModel{
 
     public void setLongitude(float longitude) {
         this.longitude = longitude;
+    }
+
+
+    public String getCompanyKey() {
+        return companyKey;
+    }
+
+    public void setCompanyKey(String companyKey) {
+        this.companyKey = companyKey;
     }
 
     public CompanybolModel getCompanybolModel() {

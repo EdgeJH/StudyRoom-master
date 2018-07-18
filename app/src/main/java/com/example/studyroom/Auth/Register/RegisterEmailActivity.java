@@ -46,6 +46,7 @@ public class RegisterEmailActivity extends BaseActivity implements IRegisterActi
                     startActivity(intent);
                 }
 
+
             }
         });
         findViewById(R.id.back_btn).setOnClickListener(new View.OnClickListener() {

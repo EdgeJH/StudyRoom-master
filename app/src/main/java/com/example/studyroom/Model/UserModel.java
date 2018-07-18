@@ -8,14 +8,15 @@ public class UserModel {
 
     String email;
     String phoneNumber;
+    String userKey;
     CardModel cardModel;
-    ReserveModel reservModel;
 
-    public UserModel(String email, String phoneNumber, CardModel cardModel, ReserveModel reservModel) {
+
+    public UserModel(String email, String phoneNumber, CardModel cardModel, String userKey) {
         this.email = email;
         this.phoneNumber = phoneNumber;
         this.cardModel = cardModel;
-        this.reservModel = reservModel;
+        this.userKey = userKey;
     }
 
     public String getEmail() {
@@ -42,11 +43,11 @@ public class UserModel {
         this.cardModel = cardModel;
     }
 
-    public ReserveModel getReservModel() {
-        return reservModel;
+    public String getUserKey() {
+        return userKey;
     }
 
-    public void setReservModel(ReserveModel reservModel) {
-        this.reservModel = reservModel;
+    public void setUserKey(String userKey) {
+        this.userKey = userKey;
     }
 }

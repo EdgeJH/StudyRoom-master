@@ -1,33 +1,87 @@
 package com.example.studyroom.Model;
 
+import java.io.Serializable;
+
 /**
  * Created by hong on 2018-05-14.
  */
 
-public class CompanybolModel {
+public class CompanybolModel implements Serializable {
 
-    boolean wifi;
-    boolean PC;
-    boolean water;
-    boolean printMachine;
-    boolean beamProject;
-    boolean lounge;
-    boolean parkingLot;
-    boolean TV;
-    boolean whiteBoard;
+    private boolean wifi;
+    private boolean PC;
+    private boolean water;
+    private boolean printMachine;
+    private boolean beamProject;
+    private boolean lounge;
+    private boolean parkingLot;
+    private boolean whiteBoard;
 
-    public CompanybolModel(boolean wifi, boolean PC, boolean water, boolean printMachine, boolean beamProject,
-                           boolean lounge, boolean parkingLot, boolean TV, boolean whiteBoard) {
-        this.wifi = wifi;
-        this.PC = PC;
-        this.water = water;
-        this.printMachine = printMachine;
-        this.beamProject = beamProject;
-        this.lounge = lounge;
-        this.parkingLot = parkingLot;
-        this.TV = TV;
-        this.whiteBoard = whiteBoard;
+    public CompanybolModel() {
     }
+
+    public CompanybolModel(Builder builder) {
+        this.wifi = builder.wifi;
+        this.PC = builder.PC;
+        this.water = builder.water;
+        this.printMachine = builder.printMachine;
+        this.beamProject = builder.beamProject;
+        this.lounge = builder.lounge;
+        this.parkingLot = builder.parkingLot;
+        this.whiteBoard = builder.whiteBoard;
+    }
+
+    public static class Builder {
+        boolean wifi;
+        boolean PC;
+        boolean water;
+        boolean printMachine;
+        boolean beamProject;
+        boolean lounge;
+        boolean parkingLot;
+        boolean whiteBoard;
+
+        public Builder setWifi(boolean wifi) {
+            this.wifi = wifi;
+            return this;
+        }
+
+        public Builder setPC(boolean PC) {
+            this.PC = PC;
+            return this;
+        }
+
+        public Builder setWater(boolean water) {
+            this.water = water;
+            return this;
+        }
+
+        public Builder setPrintMachine(boolean printMachine) {
+            this.printMachine = printMachine;
+            return this;
+        }
+
+        public Builder setBeamProject(boolean beamProject) {
+            this.beamProject = beamProject;
+            return this;
+        }
+
+        public Builder setLounge(boolean lounge) {
+            this.lounge = lounge;
+            return this;
+        }
+
+        public Builder setParkingLot(boolean parkingLot) {
+            this.parkingLot = parkingLot;
+            return this;
+        }
+
+        public Builder setWhiteBoard(boolean whiteBoard) {
+            this.whiteBoard = whiteBoard;
+            return this;
+        }
+    }
+
 
     public boolean isWifi() {
         return wifi;
@@ -83,14 +137,6 @@ public class CompanybolModel {
 
     public void setParkingLot(boolean parkingLot) {
         this.parkingLot = parkingLot;
-    }
-
-    public boolean isTV() {
-        return TV;
-    }
-
-    public void setTV(boolean TV) {
-        this.TV = TV;
     }
 
     public boolean isWhiteBoard() {
