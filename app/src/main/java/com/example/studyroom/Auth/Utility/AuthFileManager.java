@@ -46,7 +46,6 @@ public class AuthFileManager {
         this.context = context;
         String data = readFile();
         this.isWrited = data != null && !data.equals("");
-        Log.d("[DEBUG]", data+ "-aaaa");
 
         if(isWrited) {
             this.data = new AuthSerialize(data).deserialize();
@@ -89,9 +88,6 @@ public class AuthFileManager {
             fos = new FileOutputStream(file);
             fos.write(serial.getBytes());
             fos.close();
-            Log.d("[DEBUG]", serial);
-
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
