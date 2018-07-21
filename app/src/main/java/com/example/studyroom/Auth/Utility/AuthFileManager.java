@@ -95,6 +95,15 @@ public class AuthFileManager {
         }
     }
 
+    /**
+     * 모든 데이터를 삭제합니다.
+     * */
+    public void clear() {
+        this.data.clear();
+        save();
+        /**/
+    }
+
     public String get(String key) { return this.data.get(key); }
     public void input(String key, String value) { this.data.put(key, value); }
     public boolean isWrited() { return this.isWrited; }
