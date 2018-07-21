@@ -98,7 +98,7 @@ public class AuthFileManager {
     /**
      * 모든 데이터를 삭제합니다.
      * */
-    public void clear() {
+    public void cledar() {
         this.data.clear();
         save();
     }
