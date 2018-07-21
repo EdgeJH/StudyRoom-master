@@ -101,6 +101,7 @@ public class AuthFileManager {
     public void clear() {
         this.data.clear();
         save();
+        /**/
     }
 
     public String get(String key) { return this.data.get(key); }
