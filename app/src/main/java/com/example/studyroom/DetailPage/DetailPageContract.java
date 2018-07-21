@@ -9,10 +9,10 @@ import com.example.studyroom.BaseView;
 
 public interface DetailPageContract {
     interface DetailPagePresenter extends BasePresenter {
-
+        void checkLoginUser();
     }
 
     interface View extends BaseView<DetailPagePresenter> {
-
+        void userResult(boolean isUser);
     }
 }

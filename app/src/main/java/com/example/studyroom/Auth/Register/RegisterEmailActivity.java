@@ -45,7 +45,6 @@ public class RegisterEmailActivity extends BaseActivity implements IRegisterActi
                     intent.putExtra("passwd", pwd);
                     startActivity(intent);
                 }
-
             }
         });
         findViewById(R.id.back_btn).setOnClickListener(new View.OnClickListener() {

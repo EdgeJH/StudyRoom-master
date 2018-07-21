@@ -1,5 +1,7 @@
 package com.example.studyroom.Model;
 
+import java.util.ArrayList;
+
 /**
  * Created by hong on 2018-05-11.
  */
@@ -10,7 +12,7 @@ public class CompanyModel{
     private String roomName;
     private String operatingTime;
     private String companyName;
-    private int roomImage;
+    private ArrayList<String> roomImage;
     private int possibleNum;
     private int price;
     private CompanybolModel companybolModel;
@@ -37,7 +39,7 @@ public class CompanyModel{
         String roomName;
         String operatingTime;
         String companyName;
-        int roomImage;
+        ArrayList<String> roomImage;
         int possibleNum;
         int price;
         CompanybolModel companybolModel;
@@ -59,7 +61,7 @@ public class CompanyModel{
             return this;
         }
 
-        public Builder setRoomImage(int roomImage) {
+        public Builder setRoomImage(ArrayList<String> roomImage) {
             this.roomImage = roomImage;
             return this;
         }
@@ -121,11 +123,11 @@ public class CompanyModel{
         this.companyName = companyName;
     }
 
-    public int getRoomImage() {
+    public ArrayList<String> getRoomImage() {
         return roomImage;
     }
 
-    public void setRoomImage(int roomImage) {
+    public void setRoomImage(ArrayList<String> roomImage) {
         this.roomImage = roomImage;
     }
 
